@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
+</head>
+<body>
+    <h1>Formulário de Inscrição</h1>
+  
+    <form action="#" method="post" autocomplete="on"> 
+
+      <fieldset>  
+          <legend>Preencha seus dados</legend>
+       <p>
+           <label for="inome">Nome:</label><br>
+           <input type="text" name="nome" id="inome" required minlength="5" maxlength="9" placeholder="preencher seu nome">
+
+       </p>
+         
+        <p>
+            <label for="isob">Sobrenome:</label><br>
+            <input type="text" name="sobrenome" id="isob" required minlength="10" maxlength="20" placeholder="preecher seu sobrenome">
+
+        </p>
+          
+        <p>
+            <label for="iano">Data de nascimento:</label><br>
+            <input type="number" name="ano" id="iano" min="1960" max="2024" oninput="calcIdade()">
+        </p>
+
+        <p>
+            <label for="iidade">Sua Idade:</label>
+            <output id="iidade">0</output>
+
+        </p>
+
+        <p>
+            <label for="isxm">Masculino</label>
+            <input type="radio" name="sexo" id="isxm" value="masculino" class="radio">
+
+            <label for="isxf">Feminino</label>
+            <input type="radio" name="sexo" id="isxf" value="feminino" class="radio"><br>
+
+        </p>
+
+       <p>
+            <label for="iemai">E-mail:</label><br>
+            <input type="email" name="email" id="iemail" required placeholder="digite seu email">
+      </p>
+
+      <p>
+          <label for="itel">Telefone:</label><br>
+          <input type="tel" name="tel" id="itel"  pattern="^\(\d{2}\)\d{4,5}-\d{4}$" placeholder="(xx)xxxxx-xxxx">
+
+      </p>
+
+      <p>
+          <label for="icid">Cidade</label><br>
+          <input type="text" name="cidade" id="icd" required placeholder="digite a cidade">
+     </p>
+
+      <p>
+            <label for="iest">Estado</label><br>
+            <select name="estado"id="iest">
+          
+            <option value="" selected>---Escolha---</option>
+            <option value="MG">MG</option>
+            <option value="SP">SP</option>
+            <option value="RJ">RJ</option>
+            <option value="PR">PR</option>
+            <option value="SC">SC</option>
+            <option label="RS">RS</option>
+            <option label="outros">Outros</option>
+        </selec>
+
+      </p>
+
+       <p>
+          <input type="submit" value="Enviar" class="buttons">
+          <input type="reset" value="Limpar" class="buttons">
+      </p>
+      
+    </fildset>
+
+        <script>
+          function calcIdade () {
+            let atual = new Date().getFullYear()
+            iidade.innerHTML = Number(atual)- Number(iano.value)
+          }
+
+        </script>
+        
+    </form>
+</body>
+</html>
