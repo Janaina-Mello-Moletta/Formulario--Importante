@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
     <link rel="stylesheet" href="estilo.css">
-    <link rel="stylesheet" href="estilos/media-query.css">
+    <link rel="stylesheet" href="media-query/media-query.css">
 </head>
 <body>
     <h1>Formulário de Inscrição</h1>
@@ -27,7 +27,7 @@
         </p>
           
        <p>
-            <label for="iano">Data de nascimento:</label><br>
+            <label for="iano">Ano de nascimento:</label><br>
             <input type="number" name="ano" id="iano" min="1960" max="2024" oninput="calcIdade()">
         </p>
 
@@ -53,7 +53,7 @@
 
       <p>
           <label for="itel">Telefone:</label><br>
-          <input type="tel" name="tel" id="itel"  pattern="^\(\d{2}\)\d{4,5}-\d{4}$" placeholder="(xx)xxxxx-xxxx">
+          <input type="tel" name="tel" id="itel"  autocomplete="tel" required>
 
       </p>
 
